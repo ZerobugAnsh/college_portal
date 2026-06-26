@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | EduVerse College</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h2 class="logo">EduVerse</h2>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Admission</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="page-banner">
+
+        <h1>Our Courses</h1>
+        <p>Choose the course that matches your career goals.</p>
+
+    </section>
+
+    <section class="course-section">
+
+        <div class="course-card">
+            <h2>Computer Science Engineering</h2>
+            <p>
+                Learn programming, AI, web development, cloud computing,
+                cybersecurity and data structures.
+            </p>
+            <a href="register.html" class="btn">Apply Now</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Information Technology</h2>
+            <p>
+                Build skills in software development, networking,
+                databases and modern technologies.
+            </p>
+            <a href="register.html" class="btn">Apply Now</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Artificial Intelligence & Machine Learning</h2>
+            <p>
+                Explore machine learning, deep learning,
+                Python, data science and automation.
+            </p>
+            <a href="register.html" class="btn">Apply Now</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Mechanical Engineering</h2>
+            <p>
+                Learn manufacturing, automobile engineering,
+                thermodynamics and industrial design.
+            </p>
+            <a href="register.html" class="btn">Apply Now</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Civil Engineering</h2>
+            <p>
+                Study construction, surveying,
+                structural engineering and project planning.
+            </p>
+            <a href="register.html" class="btn">Apply Now</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Electrical Engineering</h2>
+            <p>
+                Gain knowledge of power systems,
+                electrical machines and renewable energy.
+            </p>
+            <a href="register.html" class="btn">Apply Now</a>
+        </div>
+
+    </section>
+
+    <section class="benefits">
+
+        <h2>Why Study With Us?</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Expert Faculty</h3>
+                <p>
+                    Experienced professors with strong academic and industry knowledge.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Industry Projects</h3>
+                <p>
+                    Hands-on practical learning through real-world projects.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Internship Support</h3>
+                <p>
+                    Internship opportunities with reputed companies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Placement Assistance</h3>
+                <p>
+                    Resume building, mock interviews and placement drives.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 EduVerse College | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
