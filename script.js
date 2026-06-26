@@ -140,3 +140,84 @@ form.addEventListener("submit", function(e){
     });
 
 });
+const contactForm = document.getElementById("contactForm");
+
+if(contactForm){
+
+contactForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("contactName");
+    let email = document.getElementById("contactEmail");
+    let subject = document.getElementById("subject");
+    let message = document.getElementById("message");
+
+    let namePattern = /^[A-Za-z ]+$/;
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    document.querySelectorAll("#contactForm input, #contactForm textarea").forEach(function(input){
+        input.style.border = "2px solid #ccc";
+    });
+
+    if(name.value.trim()==""){
+        alert("Please enter your name");
+        name.style.border="2px solid red";
+        name.focus();
+        return;
+    }
+
+    if(!namePattern.test(name.value)){
+        alert("Name should contain only letters");
+        name.style.border="2px solid red";
+        name.focus();
+        return;
+    }
+
+    name.style.border="2px solid green";
+
+    if(!emailPattern.test(email.value)){
+        alert("Enter a valid email");
+        email.style.border="2px solid red";
+        email.focus();
+        return;
+    }
+
+    email.style.border="2px solid green";
+
+    if(subject.value.trim()==""){
+        alert("Please enter subject");
+        subject.style.border="2px solid red";
+        subject.focus();
+        return;
+    }
+
+    subject.style.border="2px solid green";
+
+    if(message.value.trim()==""){
+        alert("Please write your message");
+        message.style.border="2px solid red";
+        message.focus();
+        return;
+    }
+
+    if(message.value.trim().length < 20){
+        alert("Message should contain at least 20 characters");
+        message.style.border="2px solid red";
+        message.focus();
+        return;
+    }
+
+    message.style.border="2px solid green";
+
+    alert("✅ Message Sent Successfully!");
+
+    contactForm.reset();
+
+    document.querySelectorAll("#contactForm input, #contactForm textarea").forEach(function(input){
+        input.style.border = "2px solid #ccc";
+    });
+
+});
+
+}
