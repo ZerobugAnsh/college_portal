@@ -1,607 +1,242 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
 
+/* EduVerse Premium Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+html{scroll-behavior:smooth}
 body{
-    background:#f4f7fb;
-    color:#333;
-    line-height:1.6;
+background:linear-gradient(135deg,#eef4ff,#f7f9ff,#eef7ff);
+color:#1f2937;
+line-height:1.6;
 }
 
 /* Navbar */
-
 .navbar{
-    background:#0d6efd;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-    position:sticky;
-    top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(15,23,42,.75);
+backdrop-filter:blur(14px);
+box-shadow:0 10px 25px rgba(0,0,0,.18);
 }
-
 .logo{
-    font-size:28px;
-    font-weight:bold;
+font-size:30px;
+font-weight:700;
+background:linear-gradient(45deg,#60a5fa,#38bdf8,#22d3ee);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
-
-.nav-links{
-    display:flex;
-    list-style:none;
-}
-
-.nav-links li{
-    margin-left:20px;
-}
-
+.nav-links{display:flex;list-style:none;gap:28px}
 .nav-links a{
-    text-decoration:none;
-    color:white;
-    font-size:18px;
-    transition:0.3s;
+color:#fff;
+text-decoration:none;
+font-weight:500;
+padding:8px 14px;
+border-radius:25px;
+transition:.35s;
 }
-
-.nav-links a:hover,
-.active{
-    color:yellow;
+.nav-links a:hover,.active{
+background:linear-gradient(45deg,#2563eb,#06b6d4);
+color:#fff;
 }
 
 /* Hero */
-
 .hero{
-    height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600");
-    background-size:cover;
-    background-position:center;
+min-height:92vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(8,15,40,.65),rgba(37,99,235,.45)),
+url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1800");
+background-size:cover;
+background-position:center;
 }
-
-.hero-text{
-    color:white;
-}
-
+.hero-text{max-width:850px;color:#fff}
 .hero-text h1{
-    font-size:55px;
-    margin-bottom:20px;
+font-size:64px;
+margin-bottom:20px;
+text-shadow:0 10px 30px rgba(0,0,0,.4);
 }
-
 .hero-text p{
-    font-size:20px;
-    margin-bottom:30px;
-    max-width:700px;
+font-size:21px;
+margin-bottom:35px;
+opacity:.95;
 }
-
 .btn{
-    display:inline-block;
-    text-decoration:none;
-    background:#ff9800;
-    color:white;
-    padding:12px 30px;
-    border-radius:6px;
-    transition:.3s;
-    border:none;
-    cursor:pointer;
+display:inline-block;
+padding:15px 36px;
+border:none;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+color:#fff;
+background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4);
+background-size:250% 250%;
+transition:.35s;
+box-shadow:0 12px 30px rgba(37,99,235,.35);
+cursor:pointer;
 }
-
 .btn:hover{
-    background:#e68900;
+transform:translateY(-5px) scale(1.03);
+background-position:right center;
 }
 
-/* Features */
+/* Common */
+.page-banner{
+padding:90px 20px;
+text-align:center;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:#fff;
+}
+.page-banner h1{font-size:48px}
+.page-banner p{margin-top:10px;font-size:18px}
 
-.features{
-    padding:60px 8%;
-    text-align:center;
+.features,.facilities,.benefits,.gallery-section,.register-section,
+.contact-section,.about-section,.course-section,.campus-life,.mission,.stats,.cta,.map-section{
+padding:70px 8%;
 }
 
-.features h2{
-    margin-bottom:40px;
-    font-size:35px;
+.card-container,.course-section,.gallery-container,.stats,.mission{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
 }
 
-.card-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.card,.course-card,.mission-card,.map-box,#admissionForm{
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.5);
+border-radius:20px;
+padding:28px;
+box-shadow:0 20px 40px rgba(15,23,42,.12);
+transition:.35s;
 }
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-    transition:.3s;
+.card:hover,.course-card:hover,.mission-card:hover,.gallery-item:hover,.map-box:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 45px rgba(37,99,235,.18);
 }
-
-.card:hover{
-    transform:translateY(-8px);
+.card h3,.course-card h2,.mission-card h2,.features h2,.benefits h2,.facilities h2,.campus-life h2,.contact-info h2,.contact-form h2,.about-text h2{
+color:#2563eb;
+margin-bottom:14px;
 }
-
-.card h3{
-    margin-bottom:15px;
-    color:#0d6efd;
-}
-
-/* Stats */
 
 .stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-    padding:50px 8%;
-    background:#0d6efd;
-    color:white;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+border-radius:22px;
+margin:40px 8%;
+color:#fff;
+text-align:center;
 }
-
-.stat-box{
-    text-align:center;
-}
-
-.stat-box h2{
-    font-size:40px;
-}
-
-/* CTA */
-
-.cta{
-    text-align:center;
-    padding:70px 8%;
-}
-
-.cta h2{
-    font-size:38px;
-    margin-bottom:20px;
-}
-
-.cta p{
-    margin-bottom:30px;
-    font-size:18px;
-}
-
-/* Page Banner */
-
-.page-banner{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:70px 20px;
-}
-
-.page-banner h1{
-    font-size:45px;
-}
-
-.page-banner p{
-    margin-top:10px;
-    font-size:18px;
-}
-
-/* About */
+.stat-box h2{font-size:42px}
 
 .about-section{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:center;
-    padding:60px 8%;
-    gap:40px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
-
-.about-text{
-    flex:1;
-}
-
-.about-text h2{
-    margin-bottom:20px;
-    color:#0d6efd;
-}
-
-.about-text p{
-    margin-bottom:15px;
-}
-
-.about-image{
-    flex:1;
-}
-
 .about-image img{
-    width:100%;
-    border-radius:12px;
-}
-/* Mission Section */
-
-.mission{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-    padding:60px 8%;
-}
-
-.mission-card{
-    background:#fff;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    text-align:center;
-}
-
-.mission-card h2{
-    color:#0d6efd;
-    margin-bottom:15px;
-}
-
-/* Facilities */
-
-.facilities{
-    padding:60px 8%;
-    text-align:center;
-}
-
-.facilities h2{
-    margin-bottom:35px;
-    font-size:34px;
-}
-
-/* Courses */
-
-.course-section{
-    padding:60px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.course-card{
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 12px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.course-card:hover{
-    transform:translateY(-8px);
-}
-
-.course-card h2{
-    color:#0d6efd;
-    margin-bottom:15px;
-    font-size:24px;
-}
-
-.course-card p{
-    margin-bottom:20px;
-}
-
-/* Benefits */
-
-.benefits{
-    padding:60px 8%;
-    text-align:center;
-}
-
-.benefits h2{
-    margin-bottom:35px;
-}
-
-/* Gallery */
-
-.gallery-section{
-    padding:60px 8%;
-}
-
-.gallery-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+width:100%;
+border-radius:18px;
+box-shadow:0 20px 40px rgba(0,0,0,.18);
 }
 
 .gallery-item{
-    overflow:hidden;
-    border-radius:10px;
+overflow:hidden;
+border-radius:18px;
 }
-
 .gallery-item img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    transition:0.4s;
+width:100%;
+height:260px;
+object-fit:cover;
+transition:.45s;
 }
-
-.gallery-item img:hover{
-    transform:scale(1.08);
+.gallery-item:hover img{
+transform:scale(1.12);
 }
-
-.campus-life{
-    padding:60px 8%;
-    text-align:center;
-}
-
-.campus-life h2{
-    margin-bottom:20px;
-    color:#0d6efd;
-}
-
-/* Contact */
 
 .contact-section{
-    padding:60px 8%;
-    display:flex;
-    flex-wrap:wrap;
-    gap:40px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
 }
-
-.contact-info{
-    flex:1;
-}
-
-.contact-info h2{
-    color:#0d6efd;
-    margin-bottom:20px;
-}
-
-.contact-info p{
-    margin-bottom:15px;
-}
-
-.contact-form{
-    flex:1;
-}
-
-.contact-form h2{
-    color:#0d6efd;
-    margin-bottom:20px;
-}
-
 .contact-form form{
-    display:flex;
-    flex-direction:column;
-}
-
-.contact-form input,
-.contact-form textarea{
-    padding:12px;
-    margin-bottom:18px;
-    border:1px solid #ccc;
-    border-radius:6px;
-    outline:none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-    border-color:#0d6efd;
-}
-
-.map-section{
-    padding:50px 8%;
-    text-align:center;
-}
-
-.map-box{
-    background:#fff;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Register */
-
-.register-section{
-    padding:60px 8%;
+display:flex;
+flex-direction:column;
+gap:16px;
 }
 
 #admissionForm{
-    max-width:700px;
-    margin:auto;
-    background:#fff;
-    padding:35px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+max-width:760px;
+margin:auto;
 }
-
 .input-box{
-    display:flex;
-    flex-direction:column;
-    margin-bottom:20px;
+display:flex;
+flex-direction:column;
+margin-bottom:18px;
 }
-
 .input-box label{
-    margin-bottom:8px;
-    font-weight:bold;
+margin-bottom:8px;
+font-weight:600;
 }
-
 .input-box input,
 .input-box select,
-.input-box textarea{
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:6px;
-    outline:none;
-    font-size:16px;
+.input-box textarea,
+.contact-form input,
+.contact-form textarea{
+padding:14px 16px;
+border:2px solid #dbeafe;
+border-radius:12px;
+outline:none;
+transition:.3s;
+font-size:15px;
+background:#fff;
 }
-
 .input-box input:focus,
 .input-box select:focus,
-.input-box textarea:focus{
-    border-color:#0d6efd;
+.input-box textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:#2563eb;
+box-shadow:0 0 0 4px rgba(37,99,235,.12);
 }
-/* Footer */
 
 footer{
-    background:#0d6efd;
-    color:#fff;
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
+margin-top:60px;
+padding:28px;
+text-align:center;
+background:#0f172a;
+color:#fff;
 }
 
-footer p{
-    font-size:16px;
+@media(max-width:900px){
+.about-section,.contact-section{
+grid-template-columns:1fr;
 }
-
-/* Buttons */
-
-button,
-.btn{
-    transition:0.3s;
+.hero-text h1{font-size:46px}
+.navbar{
+flex-direction:column;
+gap:15px;
 }
-
-button:hover,
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
 }
-
-/* Form Button */
-
-#admissionForm button{
-    width:100%;
-    font-size:18px;
-    margin-top:10px;
 }
-
-/* Contact Button */
-
-.contact-form button{
-    width:100%;
-    font-size:18px;
+@media(max-width:600px){
+.hero-text h1{font-size:34px}
+.hero-text p{font-size:16px}
+.page-banner h1{font-size:34px}
+.nav-links{
+flex-direction:column;
+align-items:center;
+gap:10px;
 }
-
-/* Hover Effects */
-
-.card,
-.course-card,
-.mission-card,
-.map-box{
-    transition:0.3s;
 }
-
-.card:hover,
-.course-card:hover,
-.mission-card:hover,
-.map-box:hover{
-    box-shadow:0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* Smooth Scroll */
-
-html{
-    scroll-behavior:smooth;
-}
-
-/* Responsive */
-
-@media(max-width:992px){
-
-    .navbar{
-        flex-direction:column;
-        padding:20px;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-        margin-top:15px;
-    }
-
-    .nav-links li{
-        margin:10px;
-    }
-
-    .hero-text h1{
-        font-size:42px;
-    }
-
-    .hero-text p{
-        font-size:18px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .hero{
-        height:75vh;
-        padding:20px;
-    }
-
-    .hero-text h1{
-        font-size:34px;
-    }
-
-    .hero-text p{
-        font-size:16px;
-    }
-
-    .page-banner h1{
-        font-size:34px;
-    }
-
-    .about-section{
-        flex-direction:column;
-    }
-
-    .contact-section{
-        flex-direction:column;
-    }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:480px){
-
-    .logo{
-        font-size:22px;
-    }
-
-    .nav-links{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .nav-links li{
-        margin:8px 0;
-    }
-
-    .hero-text h1{
-        font-size:28px;
-    }
-
-    .hero-text p{
-        font-size:15px;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .card-container,
-    .course-section,
-    .gallery-container{
-        grid-template-columns:1fr;
-    }
-
-    #admissionForm{
-        padding:20px;
-    }
-
-    .input-box input,
-    .input-box select,
-    .input-box textarea{
-        font-size:15px;
-    }
-
-}
-
-/* End of CSS */
